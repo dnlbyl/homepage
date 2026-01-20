@@ -1,59 +1,274 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Dónal Boyle</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Donal Boyle" />
-		<meta name="keywords" content="Donal Boyle" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body id="top">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dónal Boyle</title>
+    <meta name="description" content="Donal Boyle" />
+    <meta name="keywords" content="Donal Boyle" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #1a1d24;
+        --muted: #5d6470;
+        --accent: #3466f6;
+        --border: rgba(26, 29, 36, 0.12);
+      }
 
-		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Dónal Boyle profile picture" /></a>
-				<h1><strong>Dónal Boyle</strong></h1>
-			</header>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f1115;
+          --card: #161a22;
+          --text: #f7f7fb;
+          --muted: #b5b8c0;
+          --accent: #7aa2ff;
+          --border: rgba(247, 247, 251, 0.12);
+        }
+      }
 
-		<!-- Main -->
-			<div id="main">
+      * {
+        box-sizing: border-box;
+      }
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Hi, I am Dónal Boyle</h2>
-						</header>
-						<p>I’m a software engineer and manager with almost 20 years in the trenches - writing code, leading teams, and shipping products that solve real problems. I care a lot about keeping things practical and efficient, cutting through the noise, and helping good people do their best work. Tech for the sake of tech doesn’t interest me. Making things useful does.</p>
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
 
-						<p>After plenty of time on the corporate ladder, I’ve realized I’m happiest when I’m doing things that matter to me: being present, staying competent, having agency, connecting with people, and always exploring. I focus on what’s actually useful and what gives me more time for the things I care about outside of work.</p>
+      a {
+        color: inherit;
+      }
 
-						<p>When I’m not working, I’m probably sailing, messing around with boats, learning something new, or figuring out what comes next. I like solving real-world problems, whether that’s fixing systems or planning the next adventure. If you want to talk shop, swap sailing stories, or just connect on something that’s not pure corporate BS, reach out.</p>
-					</section>
-			</div>
+      .page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 4rem;
+        display: grid;
+        gap: 2rem;
+      }
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://twitter.com/dnlbyl" class="icon fa-twitter" rel="me"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.linkedin.com/in/donalboyle" class="icon fa-linkedin" rel="me"><span class="label">LinkedIn</span></a></li>
-					<li><a href="http://stackoverflow.com/users/105604/donal-boyle" class="icon fa-stack-overflow" rel="me"><span class="label">Stackoverflow</span></a></li>
-					<li><a href="https://github.com/dnlbyl" class="icon fa-github" rel="me"><span class="label">Github</span></a></li>
-					<li><a href="https://instagram.com/dnlbyl/" class="icon fa-instagram" rel="me"><span class="label">Instagram</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Dónal Boyle</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+      @media (min-width: 900px) {
+        .page {
+          grid-template-columns: 280px 1fr;
+          align-items: start;
+        }
+      }
 
-	</body>
+      header {
+        background: var(--card);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: 0 16px 40px rgba(10, 10, 20, 0.08);
+        border: 1px solid var(--border);
+      }
+
+      .avatar {
+        display: block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid rgba(52, 102, 246, 0.12);
+        margin-bottom: 1.5rem;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin: 0 0 0.5rem;
+      }
+
+      header p {
+        margin: 0;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      main {
+        background: var(--card);
+        border-radius: 24px;
+        padding: 2.5rem;
+        border: 1px solid var(--border);
+        box-shadow: 0 16px 40px rgba(10, 10, 20, 0.08);
+      }
+
+      main h2 {
+        margin-top: 0;
+        font-size: 1.75rem;
+      }
+
+      main p {
+        margin: 1.25rem 0;
+        color: var(--muted);
+      }
+
+      .section-title {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .social {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 0;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .social a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--text);
+        transition: border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .social a:hover {
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      .social svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        margin-top: 2rem;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a href="#top" class="avatar">
+          <img src="images/avatar.jpg" alt="Dónal Boyle profile picture" />
+        </a>
+        <h1 id="top">Dónal Boyle</h1>
+        <p>Software engineer, manager, and builder focused on useful outcomes.</p>
+        <p class="section-title">Find me</p>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com/dnlbyl" rel="me">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M19.66 6.4c.01.14.01.28.01.42 0 4.3-3.27 9.26-9.26 9.26-1.84 0-3.55-.54-4.98-1.48.26.03.5.04.77.04 1.52 0 2.92-.52 4.03-1.39-1.42-.03-2.62-.96-3.03-2.24.2.03.4.05.62.05.29 0 .58-.04.85-.11-1.48-.3-2.6-1.6-2.6-3.17v-.04c.43.24.94.39 1.47.4-.86-.57-1.42-1.55-1.42-2.66 0-.6.16-1.16.44-1.64 1.6 1.97 4 3.27 6.7 3.41-.05-.23-.08-.47-.08-.72 0-1.75 1.42-3.17 3.17-3.17.91 0 1.74.39 2.33 1.01.73-.14 1.42-.41 2.04-.77-.24.74-.74 1.36-1.4 1.76.65-.08 1.28-.25 1.86-.5-.43.64-.97 1.2-1.6 1.65z"
+                />
+              </svg>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/donalboyle" rel="me">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20.45 20.45h-3.56v-5.35c0-1.28-.03-2.94-1.79-2.94-1.79 0-2.06 1.4-2.06 2.84v5.45H9.47V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.13 20.45H3.56V9h3.57v11.45z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/105604/donal-boyle" rel="me">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M17.62 21.6v-6.02h1.95v7.97H4.43v-7.97h1.95v6.02h11.24zM7.57 17.65h8.85v1.95H7.57v-1.95zm.26-4.5l8.63 1.8-.4 1.91-8.63-1.8.4-1.91zm1.29-4.66l7.97 3.72-.82 1.78-7.97-3.72.82-1.78zm2.55-4.47l6.76 5.61-1.24 1.5-6.76-5.61 1.24-1.5zm4.27-2.68l5.35 7.09-1.56 1.18-5.35-7.09 1.56-1.18z"
+                />
+              </svg>
+              Stack Overflow
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/dnlbyl" rel="me">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2.1c-5.46 0-9.9 4.44-9.9 9.9 0 4.37 2.84 8.07 6.78 9.38.5.09.68-.22.68-.48v-1.7c-2.76.6-3.34-1.17-3.34-1.17-.45-1.13-1.1-1.43-1.1-1.43-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.1.64-1.35-2.2-.25-4.52-1.1-4.52-4.9 0-1.08.39-1.96 1.03-2.65-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.69 1.03 1.57 1.03 2.65 0 3.82-2.32 4.65-4.54 4.89.36.31.69.93.69 1.88v2.8c0 .27.18.58.69.48 3.93-1.31 6.77-5.01 6.77-9.38 0-5.46-4.44-9.9-9.9-9.9z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/dnlbyl/" rel="me">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 7.1a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.04a3.14 3.14 0 1 1 0-6.28 3.14 3.14 0 0 1 0 6.28zm6.25-8.22a1.14 1.14 0 1 1-2.28 0 1.14 1.14 0 0 1 2.28 0zm3.2 1.15c-.07-1.53-.42-2.88-1.54-4-1.12-1.12-2.47-1.47-4-1.54-1.6-.09-6.4-.09-8 0-1.53.07-2.88.42-4 1.54-1.12 1.12-1.47 2.47-1.54 4-.09 1.6-.09 6.4 0 8 .07 1.53.42 2.88 1.54 4 1.12 1.12 2.47 1.47 4 1.54 1.6.09 6.4.09 8 0 1.53-.07 2.88-.42 4-1.54 1.12-1.12 1.47-2.47 1.54-4 .09-1.6.09-6.4 0-8zM20 19.5a3.6 3.6 0 0 1-2.03 2.03c-1.4.56-4.72.43-5.97.43s-4.57.13-5.97-.43A3.6 3.6 0 0 1 4 19.5c-.56-1.4-.43-4.72-.43-5.97s-.13-4.57.43-5.97A3.6 3.6 0 0 1 6.03 4c1.4-.56 4.72-.43 5.97-.43s4.57-.13 5.97.43A3.6 3.6 0 0 1 20 6.03c.56 1.4.43 4.72.43 5.97s.13 4.57-.43 5.97z"
+                />
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <main>
+        <p class="section-title">About</p>
+        <h2>Hi, I am Dónal Boyle</h2>
+        <p>
+          I’m a software engineer and manager with almost 20 years in the trenches
+          - writing code, leading teams, and shipping products that solve real
+          problems. I care a lot about keeping things practical and efficient,
+          cutting through the noise, and helping good people do their best work.
+          Tech for the sake of tech doesn’t interest me. Making things useful
+          does.
+        </p>
+
+        <p>
+          After plenty of time on the corporate ladder, I’ve realized I’m happiest
+          when I’m doing things that matter to me: being present, staying
+          competent, having agency, connecting with people, and always exploring.
+          I focus on what’s actually useful and what gives me more time for the
+          things I care about outside of work.
+        </p>
+
+        <p>
+          When I’m not working, I’m probably sailing, messing around with boats,
+          learning something new, or figuring out what comes next. I like solving
+          real-world problems, whether that’s fixing systems or planning the next
+          adventure. If you want to talk shop, swap sailing stories, or just
+          connect on something that’s not pure corporate BS, reach out.
+        </p>
+      </main>
+    </div>
+
+    <footer>
+      <p>
+        &copy; Dónal Boyle · Design inspired by
+        <a href="https://html5up.net">HTML5 UP</a>
+      </p>
+    </footer>
+  </body>
 </html>
